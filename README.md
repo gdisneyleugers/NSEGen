@@ -5,7 +5,7 @@ Generate NMAP NSE Scripts that run host commands for automation
 genScript("python Test.py",443,'tcp','open',output='GenNSE1.nse',text="Python Test: ")
 
 # Output
-==
+--
 ```
 portrule = function(host, port)
         return port.protocol == "tcp"
