@@ -66,3 +66,25 @@ PORT    STATE SERVICE    VERSION
 |   Python Test:
 |_  true
 ```
+# Scapy example
+```
+Scanning 10.0.0.1 [1 port]
+Discovered open port 443/tcp on 10.0.0.1
+Completed SYN Stealth Scan at 02:58, 0.11s elapsed (1 total ports)
+NSE: Script scanning 10.0.0.1.
+Initiating NSE at 02:58
+WARNING: No route found for IPv6 destination :: (no default route?)
+--------------
+Testing Scapy!
+--------------
+.
+Sent 1 packets.
+Completed NSE at 02:58, 1.04s elapsed
+Nmap scan report for 10.0.0.1
+Host is up (0.031s latency).
+PORT    STATE SERVICE
+443/tcp open  https
+| ScapyTest:
+|   Scapy Test:
+|_  true
+```
