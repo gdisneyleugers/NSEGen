@@ -13,19 +13,4 @@ def genScript(cmd,port,proto,state,output,text):
 	nse_out.close()
 	return script
 
-def ManiGen(script,output):
-	scripts = []
-	t = file(output,'w')
-	counter = 0
-	for i in script:
-		scripts.append('local script{1} = require {0}\n'.format(i,counter))
-		tick = counter+1
-                counter=tick
-	for i in scripts:
-		t.write(i)
-	t.close()
-	return scripts
-
-sc = ["'GenNSE.nse'","'GenNSE0.nse'", "'GenNSE1.nse'"]
 print genScript("python Test.py",443,'tcp','open',output='GenNSE1.nse',text="Python Test: ")
-mani = ManiGen(sc,"manifest.nse")
