@@ -17,6 +17,7 @@ action = function(host, port)
         return{'Python Test: ', rel}
 end
 ```
+# Running the Script
 ```
 { ~ }  » nmap 10.0.0.1 --script=GenNSE0.nse -v -A -Pn -p 443                                  ~ 1
 
