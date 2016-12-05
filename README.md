@@ -68,6 +68,24 @@ PORT    STATE SERVICE    VERSION
 ```
 # Scapy example
 ```
+ubuntu@tegra-kali:~/NSEGen$ python NSEGen.py
+Command: python ScapyTest.py 10.0.0.1 443
+Port: 443
+Proto: tcp
+State: open
+Output Text: Scapy Test
+Save As: ScapyTest.nse
+portrule = function(host, port)
+        return port.protocol == "tcp"
+        and port.number == 443
+        and port.state == "open"
+end
+action = function(host, port)
+        local rel = os.execute("python ScapyTest.py 10.0.0.1 443")
+        return{'Scapy Test: ', rel}
+end
+
+sudo nmap 10.0.0.1 --script=ScapyTest.nse  -v -Pn -p 443 -T5
 Scanning 10.0.0.1 [1 port]
 Discovered open port 443/tcp on 10.0.0.1
 Completed SYN Stealth Scan at 02:58, 0.11s elapsed (1 total ports)
