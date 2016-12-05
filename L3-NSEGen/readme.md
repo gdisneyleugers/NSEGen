@@ -1,5 +1,6 @@
 ---
 # Scapy L3 NSE
+For layer 3 testing Scapy with prepouplating target ip and port. 
 ```
 python NSEGen.py
 Command: python ScapyTest.py
