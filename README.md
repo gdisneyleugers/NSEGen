@@ -1,7 +1,7 @@
 # NSEGen
 Generate NMAP NSE Scripts that run host commands for extending NMAP
 --
-==
+To use script:
 genScript("python Test.py",443,'tcp','open',output='GenNSE0.nse',text="Python Test: ")
 
 # Output
