@@ -6,7 +6,7 @@ def genScript(cmd,port,proto,state,output,text):
 	script += "end\n"
 	script += "action = function(host, port)\n"
 	script += '\tlocal rel = os.execute("{0}")\n'.format(cmd)
-    	script += "\treturn"+"{"+"'{0}', rel".format(text)+"}\n"
+    	script += "\treturn"+"{"+"'{0}: ', rel".format(text)+"}\n"
    	script += "end"
 	nse_out = file(output, 'w')
 	nse_out.write(script)
