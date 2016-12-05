@@ -12,5 +12,11 @@ def genScript(cmd,port,proto,state,output,text):
 	nse_out.write(script)
 	nse_out.close()
 	return script
-
-print genScript("python Test.py",443,'tcp','open',output='GenNSE1.nse',text="Python Test: ")
+if __name__ == "__main__":
+	cmd = raw_input("Command: ")
+	port = input("Port: ")
+	proto = raw_input("Proto: ")
+	state = raw_input("State: ")
+	text = raw_input("Output Text: ")
+	output = raw_input("Save As: ")
+	print genScript(cmd,port,proto,state,output,text)
