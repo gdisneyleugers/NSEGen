@@ -1,7 +1,7 @@
 # NSEGen
-Generate NMAP NSE Scripts that run host commands for extending NMAP.
+Generate Nmap NSE scripts that run host commands for extending Nmap.
 --
-Usages included Simplifying PoC reproduction and automation.
+Usages included simplifying PoC reproduction and automation.
 --
 # Usage:
 ```
