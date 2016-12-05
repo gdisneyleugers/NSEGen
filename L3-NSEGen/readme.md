@@ -17,7 +17,9 @@ end
 action = function(host, port)
         local cmd = string.format('%s %s %s', 'python ScapyTest.py', host.ip, port.number)
         local rel = os.execute(cmd)
+        return{'NMAP Input Works: ', rel}
 end
+
 
 ~/NSEGen$ sudo nmap 10.0.0.1 --script=ScapyNSE.nse -v -Pn -p 443
 sudo: unable to resolve host tegra-kali
